@@ -42,3 +42,47 @@ footer {
     width: 100%;
 }
 
+#loginForm {
+    margin-top: 20px;
+}
+
+#loginForm label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+#loginForm input[type="text"],
+#loginForm input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+#loginForm button {
+    width: 100%;
+    padding: 10px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#loginForm button:hover {
+    background-color: #45a049;
+}
+
+#loginForm p {
+    margin-top: 10px;
+    text-align: center;
+}
+
+#loginForm p a {
+    color: white;
+}
+
+#loginForm p a:hover {
+    text-decoration: underline;
+}
