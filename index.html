@@ -9,17 +9,18 @@
 <body>
     <header>
         <h1>Vibely</h1>
-        <nav>
-            <a href="#" onclick="showHome()">Home</a> |
-            <a href="#" onclick="showProfile()">Profile</a> |
-            <a href="#" onclick="showMessages()">Messages</a> |
-            <a href="#" onclick="showSettings()">Settings</a>
-        </nav>
     </header>
     <section id="content">
         <div class="container">
-            <h2>Welcome to our Social Media Web</h2>
-            <p>YOUR SOCIAL SPHERE</p>
+            <h2>Welcome to Vibely</h2>
+            <form id="loginForm">
+                <label for="username">Username:</label><br>
+                <input type="text" id="username" name="username"><br>
+                <label for="password">Password:</label><br>
+                <input type="password" id="password" name="password"><br>
+                <button type="button" onclick="login()">Login</button>
+            </form>
+            <p>Don't have an account? <a href="#" onclick="showSignUp()">Create Account</a></p>
         </div>
     </section>
     <footer>
@@ -28,3 +29,20 @@
     <script src="script.js"></script>
 </body>
 </html>
+And in your JavaScript (assuming script.js), you will need to modify the login() function to validate the user's input and show the appropriate content after successful login:
+
+javascript
+Copy code
+function login() {
+    // Assuming validation logic here, for simplicity, let's assume it's successful
+    const username = document.getElementById('username').value;
+    const password = document.getElementById('password').value;
+
+    // Assuming validation passed, show the rest of the content
+    document.getElementById('content').innerHTML = `
+        <div class="container">
+            <h2>Welcome back, ${username}!</h2>
+            <!-- Display other content here based on user's role, preferences, etc. -->
+        </div>
+    `;
+}
